@@ -370,31 +370,39 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container contact-container">
-            <h2 class="section-title">04. Get In Touch</h2>
-            <p class="contact-text" style="color: #8892b0;">Currently learning and looking for opportunities to collaborate on open-source projects.</p>
-            
-            <div class="social-links">
-                <a href="mailto:kushwaha.aditya.dev@gmail.com" class="social-btn">📧 Email Me</a>
-                <a href="https://github.com/kushwaha-aditya-dev" target="_blank" class="social-btn">🐙 GitHub</a>
-                <a href="https://www.linkedin.com/in/aditya-kushwaha-5898a3396" target="_blank" class="social-btn">💼 LinkedIn</a>
-            </div>
-
-        <!-- 1. Change the name inside the form tag -->
-<form class="contact-form" name="contact-aditya" method="POST" data-netlify="true" action="/">
-
-    <!-- 2. Change the value inside the hidden input -->
-    <input type="hidden" name="form-name" value="contact-aditya">
-    
-    <!-- The rest of your inputs stay the same -->
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" rows="5" placeholder="Message" required></textarea>
-    <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container contact-container">
+        <h2 class="section-title">04. Get In Touch</h2>
+        <p class="contact-text" style="color: #8892b0;">
+            Currently learning and looking for opportunities to collaborate on open-source projects.
+        </p>
+        
+        <div class="social-links">
+            <a href="mailto:kushwaha.aditya.dev@gmail.com" class="social-btn">📧 Email Me</a>
+            <a href="https://github.com/kushwaha-aditya-dev" target="_blank" class="social-btn">🐙 GitHub</a>
+            <a href="https://www.linkedin.com/in/aditya-kushwaha-5898a3396" target="_blank" class="social-btn">💼 LinkedIn</a>
         </div>
-    </section>
+
+        <!-- 
+            NETLIFY FORM DETECTION RULES:
+            1. name="portfolio-contact" (Unique name)
+            2. method="POST" (Required)
+            3. data-netlify="true" (Tells Netlify to watch this form)
+        -->
+        <form class="contact-form" name="portfolio-contact" method="POST" data-netlify="true">
+            
+            <!-- HIDDEN INPUT: This is the secret key Netlify looks for -->
+            <input type="hidden" name="form-name" value="portfolio-contact" />
+
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" rows="5" placeholder="Message" required></textarea>
+            
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
 
     <footer>
         <p>Built by Aditya Kushwaha &copy; <span id="year"></span></p>
